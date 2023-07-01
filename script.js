@@ -9,22 +9,40 @@ function getComputerChoice() {
     }
 }
 
-let computerSelection = getComputerChoice();
-let playerSelection = prompt('Rock, Paper or Scissors');
-console.log(playerSelection);
+const computerSelection = getComputerChoice();
+const playerSelection = prompt('Rock, Paper or Scissors');
+
 
 function playRound(playerSelection,computerSelection){
     let lowercase = playerSelection.toLowerCase();
     console.log(lowercase);
     
     if(lowercase === computerSelection){
-        return 'Tie!';
+        console.log('Tie!');
     }else if((lowercase === 'rock' && computerSelection === 'paper') || 
     (lowercase === 'scissors' && computerSelection === 'rock') || (lowercase === 'paper' && computerSelection === 'scissors')){
-        return `You Lose! ${computerSelection} beats ${lowercase}`;
+        console.log(`You Lose! ${computerSelection} beats ${lowercase}`);
     }else{
-        return `You Win! ${lowercase} beats ${computerSelection}`;
+        console.log(`You Win! ${lowercase} beats ${computerSelection}`);
     }
 }
 
-console.log(playRound(playerSelection,computerSelection));
+
+
+function game(){
+  playRound(playerSelection,computerSelection);
+  let newPlayerSelection = prompt('Rock, Paper or Scissors?');
+  let newComputerSelection = getComputerChoice();
+  playRound(newPlayerSelection,newComputerSelection);
+  newPlayerSelection = prompt('Rock, Paper or Scissors?');
+  newComputerSelection = getComputerChoice();
+  playRound(newPlayerSelection,newComputerSelection);
+  newPlayerSelection = prompt('Rock, Paper or Scissors?');
+  newComputerSelection = getComputerChoice();
+  playRound(newPlayerSelection,newComputerSelection);
+  newPlayerSelection = prompt('Rock, Paper or Scissors?');
+  newComputerSelection = getComputerChoice();
+  playRound(newPlayerSelection,newComputerSelection);  
+}
+
+game();
