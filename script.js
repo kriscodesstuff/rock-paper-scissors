@@ -42,7 +42,6 @@ function playRound(playerSelection,computerSelection){
         playerScore += 1
     }
 
-    console.log(playerScore,computerScore);
 }
 
 
