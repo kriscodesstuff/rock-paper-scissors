@@ -1,3 +1,5 @@
+// Create a function that randomly generates Rock, Paper or Scissors
+
 function getComputerChoice() {
     let randomNum = Math.floor(Math.random() * 3);
     if(randomNum === 0){
@@ -9,14 +11,25 @@ function getComputerChoice() {
     }
 }
 
+// Store the Computer Selection and the player selection into variables
+
 const computerSelection = getComputerChoice();
 const playerSelection = prompt('Rock, Paper or Scissors');
+
+// Create variable to keep score of all the matches
+
 let playerScore = 0;
 let computerScore = 0;
 
+// Create a function that plays a single round of Rock, Paper, Scissors
+
 function playRound(playerSelection,computerSelection){
+
+    // Make the player's selection case insensitive by converting it to lowercase
+
     let lowercase = playerSelection.toLowerCase();
-    console.log(lowercase);
+   
+    // Compare the player's selection and the computer's selection and console.log the winner and increment their score
      
     if(lowercase === computerSelection){
         console.log('Tie!');
@@ -33,9 +46,12 @@ function playRound(playerSelection,computerSelection){
 }
 
 
+// Create a function that plays the game for 5 rounds and tallies up the score
 
 function game(){
   playRound(playerSelection,computerSelection);
+
+  // After each round reset the player's selection and the computer's selection
 
   let newPlayerSelection = prompt('Rock, Paper or Scissors?');
   let newComputerSelection = getComputerChoice();
@@ -55,7 +71,9 @@ function game(){
   newPlayerSelection = prompt('Rock, Paper or Scissors?');
   newComputerSelection = getComputerChoice();
 
-  playRound(newPlayerSelection,newComputerSelection);  
+  playRound(newPlayerSelection,newComputerSelection); 
+  
+  // Compare the player's score and the computer's score and print out who won
 
   if(computerScore > playerScore){
     console.log('Computer wins!');
