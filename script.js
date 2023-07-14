@@ -1,6 +1,8 @@
 const rock = document.querySelector('#rock');
 const paper = document.querySelector('#paper');
 const scissors = document.querySelector('#scissors');
+const div = document.querySelector('div');
+
 
 let playerSelection;
 
@@ -35,13 +37,13 @@ function playRound(playerSelection,computerSelection){
    
      
     if(lowercase === computerSelection){
-        console.log('Tie!');
+        div.innerText ='Tie!'
     }else if((lowercase === 'rock' && computerSelection === 'paper') || 
     (lowercase === 'scissors' && computerSelection === 'rock') || (lowercase === 'paper' && computerSelection === 'scissors')){
-        console.log(`You Lose! ${computerSelection} beats ${lowercase}`);
+        div.innerText = `You Lose! ${computerSelection} beats ${lowercase}`
         computerScore += 1
     }else{
-        console.log(`You Win! ${lowercase} beats ${computerSelection}`);
+        div.innerText = `You Win! ${lowercase} beats ${computerSelection}`;
         playerScore += 1
     }
 
