@@ -6,10 +6,13 @@ let playerSelection;
 
 function getPlayerChoice(event) {
     playerSelection = event.target.id;
+    console.log(playerSelection);
 }
 
 
 rock.addEventListener('click',getPlayerChoice);
+paper.addEventListener('click',getPlayerChoice);
+scissors.addEventListener('click',getPlayerChoice);
 
 
 
