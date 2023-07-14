@@ -4,16 +4,6 @@ const scissors = document.querySelector('#scissors');
 
 let playerSelection;
 
-function getPlayerChoice(event) {
-    playerSelection = event.target.id;
-    console.log(playerSelection);
-}
-
-
-rock.addEventListener('click',getPlayerChoice);
-paper.addEventListener('click',getPlayerChoice);
-scissors.addEventListener('click',getPlayerChoice);
-
 
 
 function getComputerChoice() {
@@ -56,6 +46,16 @@ function playRound(playerSelection,computerSelection){
     }
 
 }
+
+function getPlayerChoice(event) {
+    playerSelection = event.target.id;
+
+    playRound(playerSelection,computerSelection);
+}
+
+rock.addEventListener('click',getPlayerChoice);
+paper.addEventListener('click',getPlayerChoice);
+scissors.addEventListener('click',getPlayerChoice);
 
 
 // Create a function that plays the game for 5 rounds and tallies up the score
