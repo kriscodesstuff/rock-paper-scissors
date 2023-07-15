@@ -23,11 +23,9 @@ function getComputerChoice() {
 
 
 
-// const computerSelection = getComputerChoice();
-
-
 let playerScore = 0;
 let computerScore = 0;
+
 
 
 
@@ -36,6 +34,17 @@ function playRound(playerSelection,computerSelection){
     
 
     let lowercase = playerSelection.toLowerCase();
+
+    if(computerScore == 5 && playerScore < 5){
+            message.innerText = 'Computer wins!'
+            return
+          }else if(playerScore == 5 && computerScore < 5){
+            message.innerText = 'Player wins!'
+            return
+          }else if(playerScore == 5 && computerScore == 5){
+            message.innerText = 'It\'s a tie!'
+            return
+          }
    
      
     if(lowercase === computerSelection){
@@ -67,48 +76,5 @@ function getChoice(event) {
 rock.addEventListener('click',getChoice);
 paper.addEventListener('click',getChoice);
 scissors.addEventListener('click',getChoice);
-
-
-// Create a function that plays the game for 5 rounds and tallies up the score
-
-// function game(){
-//   playRound(playerSelection,computerSelection);
-
-//   // After each round reset the player's selection and the computer's selection
-
-//   let newPlayerSelection = prompt('Rock, Paper or Scissors?');
-//   let newComputerSelection = getComputerChoice();
-
-//   playRound(newPlayerSelection,newComputerSelection);
-
-//   newPlayerSelection = prompt('Rock, Paper or Scissors?');
-//   newComputerSelection = getComputerChoice();
-
-//   playRound(newPlayerSelection,newComputerSelection);
-
-//   newPlayerSelection = prompt('Rock, Paper or Scissors?');
-//   newComputerSelection = getComputerChoice();
-
-//   playRound(newPlayerSelection,newComputerSelection);
-
-//   newPlayerSelection = prompt('Rock, Paper or Scissors?');
-//   newComputerSelection = getComputerChoice();
-
-//   playRound(newPlayerSelection,newComputerSelection); 
-  
-//   // Compare the player's score and the computer's score and print out who won
-
-//   if(computerScore > playerScore){
-//     console.log('Computer wins!');
-//   }else if(playerScore > computerScore){
-//     console.log('Player wins!');
-//   }else{
-//     console.log("It's a tie!");
-//   }
-// }
-
-// game();
-
-
 
 
