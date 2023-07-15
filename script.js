@@ -21,7 +21,7 @@ function getComputerChoice() {
 
 
 
-const computerSelection = getComputerChoice();
+// const computerSelection = getComputerChoice();
 
 
 let playerScore = 0;
@@ -51,8 +51,11 @@ function playRound(playerSelection,computerSelection){
 
 function getPlayerChoice(event) {
     playerSelection = event.target.id;
+    let computerSelection = getComputerChoice();
 
     playRound(playerSelection,computerSelection);
+
+    
 }
 
 rock.addEventListener('click',getPlayerChoice);
