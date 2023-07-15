@@ -49,7 +49,7 @@ function playRound(playerSelection,computerSelection){
 
 }
 
-function getPlayerChoice(event) {
+function getChoice(event) {
     playerSelection = event.target.id;
     let computerSelection = getComputerChoice();
 
@@ -58,9 +58,9 @@ function getPlayerChoice(event) {
     
 }
 
-rock.addEventListener('click',getPlayerChoice);
-paper.addEventListener('click',getPlayerChoice);
-scissors.addEventListener('click',getPlayerChoice);
+rock.addEventListener('click',getChoice);
+paper.addEventListener('click',getChoice);
+scissors.addEventListener('click',getChoice);
 
 
 // Create a function that plays the game for 5 rounds and tallies up the score
