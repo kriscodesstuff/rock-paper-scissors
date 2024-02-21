@@ -60,12 +60,17 @@ body{
 
 .scoreboard{
     display: flex;
-    margin: 2px;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .container, .scoreboard{
     width: 50%;
     height: 100%;
+}
+
+.scoreboard-headers, .score-display{
+    display: flex;
+    justify-content: space-around;
 }
 
