@@ -3,7 +3,8 @@ const paper = document.querySelector('#paper');
 const scissors = document.querySelector('#scissors');
 const div = document.querySelector('div');
 const message = document.querySelector('#message');
-const score = document.querySelector('#score');
+const playerScoreDisplay = document.querySelector('#player-display');
+const computerScoreDisplay = document.querySelector('#computer-display')
 
 
 let playerSelection;
@@ -49,16 +50,19 @@ function playRound(playerSelection,computerSelection){
      
     if(lowercase === computerSelection){
         message.innerText ='Tie!'
-        score.innerText = `Computer Score: ${computerScore} Player Score: ${playerScore}`
+        playerScoreDisplay.innerText = `${playerScore}`
+        computerScoreDisplay.innerText = `${computerScore}`
     }else if((lowercase === 'rock' && computerSelection === 'paper') || 
     (lowercase === 'scissors' && computerSelection === 'rock') || (lowercase === 'paper' && computerSelection === 'scissors')){
         message.innerText = `You Lose! ${computerSelection} beats ${lowercase}`
         computerScore += 1
-        score.innerText = `Computer Score: ${computerScore} Player Score: ${playerScore}`
+        playerScoreDisplay.innerText = `${playerScore}`
+        computerScoreDisplay.innerText = `${computerScore}`
     }else{
         message.innerText = `You Win! ${lowercase} beats ${computerSelection}`;
         playerScore += 1
-        score.innerText = `Computer Score: ${computerScore} Player Score: ${playerScore}`
+        playerScoreDisplay.innerText = `${playerScore}`
+        computerScoreDisplay.innerText = `${computerScore}`
     }
 
 

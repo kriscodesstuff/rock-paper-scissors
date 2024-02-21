@@ -7,13 +7,37 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
-    <div>
+    <div class="container">
+        <div>
+            <h2>Play against the computer!</h2>
+            <h2>Pick rock paper or scissors</h2>
+        </div>
+        <div class="all-buttons">
+            <div class="rock-button">
+                <img src="imgs/rock-vector.svg" alt="Rock icon">
+                <button id="rock">Rock</button>
+            </div>
+            <div class="paper-button">
+                <img src="imgs/paper-vector.svg" alt="Paper icon">
+                <button id="paper">Paper</button>
+            </div>
+            <div class="scissors-button">
+                <img src="imgs/scissors-vector.svg" alt="Scissors icon">
+                <button id="scissors">Scissors</button>
+            </div>
+        </div>
+    </div>
+    <div class="scoreboard">
+        <h1>You</h1>
+        <h1>Computer</h1>
+        <p id="player-display"></p>
+        <p id="computer-display"></p>
+        <p id="message"></p>
+    </div>
+    <!-- <div>
         <p id="message"></p>
         <p id="score"></p>
-    </div>
+    </div> -->
     <script src="script.js"></script>
 </body>
 </html>

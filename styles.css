@@ -1,4 +1,71 @@
 body{
-    color: blue;
-    background-color: orange;
+    margin: 0;
+    padding: 0;
+    color: #474340;
+    background-color: #FFCAB1; 
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
+
+.container{
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container button{
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    
+}
+
+
+.rock-button,.paper-button,.scissors-button{
+    border: 5px solid #968E85;
+    border-radius: 50%;
+    padding: 20px;
+    width: 90px;
+    margin-bottom: 50px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px hsla(0, 0%, 0%,.70);
+}
+
+
+.rock-button:hover,.paper-button:hover,.scissors-button:hover{
+    cursor: pointer;
+    box-shadow: 5px 5px hsla(0, 0%, 0%,.50);
+}
+
+.rock-button, .rock-button button{
+    background-color: #8CC084;
+}
+
+.paper-button, .paper-button button{
+    background-color: #ECDCB0;
+}
+
+.scissors-button, .scissors-button button{
+    background-color: #C1D7AE;
+}
+
+.scoreboard{
+    display: flex;
+    margin: 2px;
+    justify-content: space-evenly;
+}
+
+.container, .scoreboard{
+    width: 50%;
+    height: 100%;
+}
+
