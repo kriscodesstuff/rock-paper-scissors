@@ -18,7 +18,7 @@ body{
     align-items: center;
 }
 
-.container button{
+.rock p, .paper p, .scissors p {
     font-size: 1.2rem;
     font-weight: bold;
     border: none;  
@@ -45,15 +45,15 @@ body{
     box-shadow: 5px 5px hsla(0, 0%, 0%,.50);
 }
 
-.rock, .rock button{
+.rock{
     background-color: #8CC084;
 }
 
-.paper,.paper button{
+.paper{
     background-color: #ECDCB0;
 }
 
-.scissors, .scissors button{
+.scissors{
     background-color: #C1D7AE;
 }
 
