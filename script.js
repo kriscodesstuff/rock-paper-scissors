@@ -1,6 +1,6 @@
-const rock = document.querySelector('.rock-button');
-const paper = document.querySelector('.paper-button');
-const scissors = document.querySelector('.scissors-button');
+const rock = document.querySelector('.rock');
+const paper = document.querySelector('.paper');
+const scissors = document.querySelector('.scissors');
 const div = document.querySelector('div');
 const message = document.querySelector('#message');
 const playerScoreDisplay = document.querySelector('#player-display');
@@ -69,11 +69,10 @@ function playRound(playerSelection,computerSelection){
 }
 
 function getChoice(event) {
-    playerSelection = event.target.id;
+    playerSelection = event.target.className;
     let computerSelection = getComputerChoice();
 
     playRound(playerSelection,computerSelection);
-
     
 }
 
