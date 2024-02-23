@@ -69,11 +69,10 @@ function playRound(playerSelection,computerSelection){
 }
 
 function getChoice(event) {
-    playerSelection = event.target.className;
+    playerSelection = event.target.dataset.button;
     let computerSelection = getComputerChoice();
 
-    playRound(playerSelection,computerSelection);
-    
+    playRound(playerSelection,computerSelection);  
 }
 
 rock.addEventListener('click',getChoice);
