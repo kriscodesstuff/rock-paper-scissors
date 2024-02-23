@@ -1,8 +1,8 @@
 body{
     margin: 0;
     padding: 0;
-    color: #474340;
-    background-color: #FFCAB1; 
+    color: #023047;
+    background-color: #8ECAE6; 
     height: 100vh;
     display: flex;
     align-items: center;
@@ -26,7 +26,6 @@ body{
 
 
 .rock,.paper,.scissors{
-    border: 5px solid #968E85;
     border-radius: 50%;
     padding: 20px;
     width: 90px;
@@ -37,6 +36,7 @@ body{
     align-items: center;
     justify-content: center;
     box-shadow: 2px 2px hsla(0, 0%, 0%,.70);
+    background-color: #FB8500;
 }
 
 
@@ -45,20 +45,12 @@ body{
     box-shadow: 5px 5px hsla(0, 0%, 0%,.50);
 }
 
-.rock{
-    background-color: #8CC084;
-}
 
-.paper{
-    background-color: #ECDCB0;
-}
-
-.scissors{
-    background-color: #C1D7AE;
+.scoreboard,.scoreboard-headers,.score-display,.message-display{
+    display: flex;
 }
 
 .scoreboard{
-    display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
@@ -69,7 +61,32 @@ body{
 }
 
 .scoreboard-headers, .score-display{
-    display: flex;
     justify-content: space-around;
+    
+}
+
+.message-display{
+    align-self: center;
+}
+
+.score-display p{
+    background-color: #219EBC;
+    padding: 70px;
+}
+
+.score-display{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.message-display{
+    font-size: 2.5rem;
+    font-weight: bold;
+    background-color: #219EBC;
+    width: 650px;
+    height: 300px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
 }
 
