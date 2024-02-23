@@ -34,7 +34,7 @@ function playRound(playerSelection,computerSelection){
 
     
 
-    let lowercase = playerSelection.toLowerCase();
+    // let lowercase = playerSelection.toLowerCase();
 
     if(computerScore == 5 && playerScore < 5){
             message.innerText = 'Computer wins!'
@@ -48,18 +48,18 @@ function playRound(playerSelection,computerSelection){
           }
    
      
-    if(lowercase === computerSelection){
+    if(playerSelection === computerSelection){
         message.innerText ='Tie!'
         playerScoreDisplay.innerText = `${playerScore}`
         computerScoreDisplay.innerText = `${computerScore}`
-    }else if((lowercase === 'rock' && computerSelection === 'paper') || 
-    (lowercase === 'scissors' && computerSelection === 'rock') || (lowercase === 'paper' && computerSelection === 'scissors')){
-        message.innerText = `You Lose! ${computerSelection} beats ${lowercase}`
+    }else if((playerSelection === 'rock' && computerSelection === 'paper') || 
+    (playerSelection === 'scissors' && computerSelection === 'rock') || (playerSelection === 'paper' && computerSelection === 'scissors')){
+        message.innerText = `You Lose! ${computerSelection} beats ${playerSelection}`
         computerScore += 1
         playerScoreDisplay.innerText = `${playerScore}`
         computerScoreDisplay.innerText = `${computerScore}`
     }else{
-        message.innerText = `You Win! ${lowercase} beats ${computerSelection}`;
+        message.innerText = `You Win! ${playerSelection} beats ${computerSelection}`;
         playerScore += 1
         playerScoreDisplay.innerText = `${playerScore}`
         computerScoreDisplay.innerText = `${computerScore}`
