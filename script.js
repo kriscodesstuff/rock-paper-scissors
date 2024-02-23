@@ -33,9 +33,9 @@ let computerScore = 0;
 function playRound(playerSelection,computerSelection){
     
 
-    const capitalizeFirstLetter = () => {
+    const capitalizeFirstLetter = (selection) => {
         
-        const split = playerSelection.split('');
+        const split = selection.split('');
         const upperCase = split[0].toUpperCase();
         const slice = split.slice(1);
         slice.unshift(upperCase)
@@ -43,7 +43,8 @@ function playRound(playerSelection,computerSelection){
         return slice.join('') 
     }
 
-    const playerSelectionCapitalized = capitalizeFirstLetter()
+    const playerSelectionCapitalized = capitalizeFirstLetter(playerSelection);
+    const computerSelectionCapitalized = capitalizeFirstLetter(computerSelection);
 
     if(computerScore == 5 && playerScore < 5){
             message.innerText = 'Computer wins!'
@@ -63,12 +64,12 @@ function playRound(playerSelection,computerSelection){
         computerScoreDisplay.innerText = `${computerScore}`
     }else if((playerSelection === 'rock' && computerSelection === 'paper') || 
     (playerSelection === 'scissors' && computerSelection === 'rock') || (playerSelection === 'paper' && computerSelection === 'scissors')){
-        message.innerText = `You Lose! ${computerSelection} beats ${playerSelection}`
+        message.innerText = `You Lose! ${computerSelectionCapitalized} Beats ${playerSelectionCapitalized}`
         computerScore += 1
         playerScoreDisplay.innerText = `${playerScore}`
         computerScoreDisplay.innerText = `${computerScore}`
     }else{
-        message.innerText = `You Win! ${playerSelection} beats ${computerSelection}`;
+        message.innerText = `You Win! ${playerSelectionCapitalized} Beats ${computerSelectionCapitalized}`;
         playerScore += 1
         playerScoreDisplay.innerText = `${playerScore}`
         computerScoreDisplay.innerText = `${computerScore}`
