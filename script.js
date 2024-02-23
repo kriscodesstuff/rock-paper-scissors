@@ -31,10 +31,19 @@ let computerScore = 0;
 
 
 function playRound(playerSelection,computerSelection){
-
     
 
-    // let lowercase = playerSelection.toLowerCase();
+    const capitalizeFirstLetter = () => {
+        
+        const split = playerSelection.split('');
+        const upperCase = split[0].toUpperCase();
+        const slice = split.slice(1);
+        slice.unshift(upperCase)
+        
+        return slice.join('') 
+    }
+
+    const playerSelectionCapitalized = capitalizeFirstLetter()
 
     if(computerScore == 5 && playerScore < 5){
             message.innerText = 'Computer wins!'
