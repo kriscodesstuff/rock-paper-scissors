@@ -193,3 +193,49 @@ body{
         font-size: 2rem;
     }
 }
+
+@media (max-width:425px){
+    body{
+        flex-direction: column;
+    }
+
+    .all-buttons{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    img{
+        display: none;
+    }
+
+    .rock,.paper,.scissors{
+        padding: 30px;
+        width: 30px;
+        height: 30px;
+        
+     }
+
+     .scoreboard{
+        justify-content: space-evenly;
+        grid-template-columns: 80px 50px 80px;
+     }
+
+     #player-header,#computer-header{
+        font-size: 1.5rem;
+     }
+
+     #player-display, #computer-display{
+        font-size: 2rem;
+    }
+
+    #message{
+        font-size: 1.8rem;
+    }
+
+    .modal button{
+        width: 300px;
+        padding: 30px;
+        font-size: 2.5rem;
+    }
+}
