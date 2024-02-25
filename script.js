@@ -7,6 +7,7 @@ const playerScoreDisplay = document.querySelector('#player-display');
 const computerScoreDisplay = document.querySelector('#computer-display')
 const modal = document.querySelector('.modal');
 const finalScore = document.querySelector('#final-score');
+const resetGameBtn = document.querySelector('#reset-game-btn');
 
 let playerSelection;
 
@@ -82,6 +83,15 @@ function playRound(playerSelection,computerSelection){
 
 }
 
+function resetGame(){
+    playerScore = 0;
+    computerScore = 0;
+    modal.classList.add('hidden');
+    playerScoreDisplay.innerText = '';
+    computerScoreDisplay.innerText = '';
+    message.innerText = '';
+}
+
 function getChoice(event) {
     playerSelection = event.target.dataset.button;
     let computerSelection = getComputerChoice();
@@ -92,5 +102,5 @@ function getChoice(event) {
 rock.addEventListener('click',getChoice);
 paper.addEventListener('click',getChoice);
 scissors.addEventListener('click',getChoice);
-
+resetGameBtn.addEventListener('click',resetGame);
 
