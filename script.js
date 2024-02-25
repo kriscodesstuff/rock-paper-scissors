@@ -5,7 +5,8 @@ const div = document.querySelector('div');
 const message = document.querySelector('#message');
 const playerScoreDisplay = document.querySelector('#player-display');
 const computerScoreDisplay = document.querySelector('#computer-display')
-
+const modal = document.querySelector('.modal');
+const finalScore = document.querySelector('#final-score');
 
 let playerSelection;
 
@@ -47,16 +48,19 @@ function playRound(playerSelection,computerSelection){
     const computerSelectionCapitalized = capitalizeFirstLetter(computerSelection);
 
     if(computerScore == 5 && playerScore < 5){
-            message.innerText = 'Computer wins!'
+            modal.classList.remove('hidden');
+            finalScore.innerText = 'Computer wins!'
             return
           }else if(playerScore == 5 && computerScore < 5){
-            message.innerText = 'Player wins!'
+            modal.classList.remove('hidden');
+            finalScore.innerText = 'Player wins!'
             return
           }else if(playerScore == 5 && computerScore == 5){
-            message.innerText = 'It\'s a tie!'
+            modal.classList.remove('hidden');
+            finalScore.innerText = 'It\'s a tie!'
             return
           }
-   
+    
      
     if(playerSelection === computerSelection){
         message.innerText ='Tie!'
